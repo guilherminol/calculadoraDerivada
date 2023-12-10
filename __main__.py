@@ -1,5 +1,6 @@
 from menu import Menu
-from derivadas import derivadaGeral
+from derivadas import derivadaGeral, inputDerivada, prettyDerivada
+from teste import multiplicarPolinomios, adicionarPolinomios
 
 
 resposta = '0'
@@ -14,6 +15,30 @@ while (resposta != 9):
         for i in range(grau):
             membroDaEquacao = input(f"Digite em que x tem grau {grau + 1 - i} -  ")
     
+    if (resposta == 2):
+        dividendo = []
+        divisor = []
+
+        print("Primeiro coloque a exepressão do DIVIDENDO:")
+        # dividendo = [5, 8, 0, 2]
+        dividendo = inputDerivada()
+
+        print("Agora coloque a exepressão do DIVISOR:")
+        # divisor = [3, 5, 1]
+        divisor = inputDerivada()
+
+        dividendo_derivada = derivadaGeral(dividendo)
+        divisor_derivada = derivadaGeral(divisor)
+
+        uv = multiplicarPolinomios(dividendo_derivada, divisor)
+        vu = multiplicarPolinomios(dividendo, divisor_derivada)
+        vu = [-i for i in vu]
+        
+        dividendo_operacao = adicionarPolinomios(uv, vu)
+        divisor_operacao = divisor
+
+        print(f'{prettyDerivada(dividendo_operacao)}/({prettyDerivada(divisor_operacao)})^2')
+
 
 
     # Exemplo de uso:
