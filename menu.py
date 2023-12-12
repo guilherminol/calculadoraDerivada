@@ -4,6 +4,7 @@ def Menu():
     print("1 - Derivada simples")
     print("2 - Regra do quociente")
     print("3 - Regra do produto")
+    print("4 -  Derivada de funções trigonométricas")
     print("9 - Sair")
     resultado = int( input('') )
     return resultado

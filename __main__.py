@@ -1,6 +1,6 @@
 from menu import Menu
-from derivadas import derivadaGeral, inputDerivada, prettyDerivada
-from polinomio import multiplicarPolinomios, adicionarPolinomios
+from derivadas import derivadaGeral, inputDerivada, prettyDerivada, derivada_trig_manual
+from teste import multiplicarPolinomios, adicionarPolinomios
 
 
 resposta = '0'
@@ -61,12 +61,8 @@ while (resposta != 9):
 
         print(f'{prettyDerivada(produto)}')
 
-
-
-    # Exemplo de uso:
-polinomio = [4,5,1]                                # representa 4xˆ2 + 5x + 1
-print(derivadaGeral(polinomio)) # Saída: [8, 5], que representa 8x + 5
-
-polinomio = [4,2,7,9]                                  # representa 4xˆ3 + 2xˆ2 + 7x + 9
-print(derivadaGeral(polinomio)) # Saída: [12, 4, 7], que representa 12xˆ2 + 4x + 7
+    
+    if (resposta == 4):
+        funcTrig = input("Agora coloque a função trigonométrica (um termo por vez): ")
+        print(f{"derivada_trig_manual(funcTrig)"})
 

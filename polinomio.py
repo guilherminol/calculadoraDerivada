@@ -89,3 +89,4 @@ def adicionarPolinomios(expressao1, expressao2):
 
     resultado.reverse()
     return resultado
+

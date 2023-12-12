@@ -47,3 +47,18 @@ def prettyDerivada(derivada):
             resultado += f'^{reverse_index}'   
         resultado += ' '
     return resultado
+
+
+def derivada_trig_manual(func):
+    derivadas = {
+        'sin': 'cos',
+        'cos': '-sin',
+        'tan': 'sec^2',
+        'csc': '-csc*cot',
+        'sec': 'sec*tan',
+        'cot': '-csc^2'
+    }
+    for trig_func in derivadas.keys():
+        if trig_func in func:
+            return func.replace(trig_func, derivadas[trig_func])
+    return "Função não reconhecida"
