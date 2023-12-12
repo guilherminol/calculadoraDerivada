@@ -64,5 +64,5 @@ while (resposta != 9):
     
     if (resposta == 4):
         funcTrig = input("Agora coloque a função trigonométrica (um termo por vez): ")
-        print(f{"derivada_trig_manual(funcTrig)"})
+        print(f"Resultado: {derivada_trig_manual(funcTrig)}")
 
