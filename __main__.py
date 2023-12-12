@@ -1,6 +1,6 @@
 from menu import Menu
 from derivadas import derivadaGeral, inputDerivada, prettyDerivada
-from teste import multiplicarPolinomios, adicionarPolinomios
+from polinomio import multiplicarPolinomios, adicionarPolinomios
 
 
 resposta = '0'
@@ -38,6 +38,28 @@ while (resposta != 9):
         divisor_operacao = divisor
 
         print(f'{prettyDerivada(dividendo_operacao)}/({prettyDerivada(divisor_operacao)})^2')
+
+    if (resposta == 3):
+        termo1 = []
+        termo2 = []
+
+        print("Primeiro coloque a exepressão do DIVIDENDO:")
+        # termo1 = [5, 8, 0, 2]
+        termo1 = inputDerivada()
+
+        print("Agora coloque a exepressão do DIVISOR:")
+        # termo2 = [3, 5, 1]
+        termo2 = inputDerivada()
+
+        termo1_derivada = derivadaGeral(termo1)
+        termo2_derivada = derivadaGeral(termo2)
+
+        uv = multiplicarPolinomios(termo1_derivada, termo2)
+        vu = multiplicarPolinomios(termo1, termo2_derivada)
+
+        produto = adicionarPolinomios(uv, vu)
+
+        print(f'{prettyDerivada(produto)}')
 
 
 

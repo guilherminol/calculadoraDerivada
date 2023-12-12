@@ -3,6 +3,7 @@ def Menu():
     printaBarras()
     print("1 - Derivada simples")
     print("2 - Regra do quociente")
+    print("3 - Regra do produto")
     print("9 - Sair")
     resultado = int( input('') )
     return resultado

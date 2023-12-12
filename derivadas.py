@@ -21,7 +21,6 @@ def inputDerivada():
 def prettyDerivada(derivada):
     resultado = ''
 
-
     for index, value in enumerate(derivada):
         #Inverte o loop
         tamanho = (len(derivada) - 1)
